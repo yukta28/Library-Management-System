@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+   <h2>{% if object.id %} Edit Book{% else %} Add Book{% endif %}</h2>
+   <method = "post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type = "submit"> Save</button>
+   </form>
+   <a href = "{% url 'book_list' %}">Back to list</a>
+
+{% endlblock %}

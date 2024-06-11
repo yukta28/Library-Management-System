@@ -1,0 +1,11 @@
+{% extends 'base_generic.html' %}
+
+{% block comtent %}
+
+<h2> Are you sure you want to delete"{{ object.title }}"?</h2>
+<form method = "post">
+    {% csrf_token %}
+    <button type = "Submit"> Yes, delete it</button>
+</form>
+<a herf = "% url 'book_list' %}">Cancel</a>
+{% endblock %}
